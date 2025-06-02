@@ -70,7 +70,7 @@ def on_choice_selected(choice):
     if new_state != current_state:
         update_dialogue(new_state)
 
-# Δημιουργία του κύριου παραθύρου
+# Δημιουργία του κύριου παραθύρου (Βασικό)
 root = tk.Tk()
 root.title("A Village Adventure")
 
