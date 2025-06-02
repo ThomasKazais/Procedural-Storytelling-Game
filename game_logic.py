@@ -22,12 +22,12 @@ def can_make_choice(state, choice):
             if needed_amount > 0 and not player_inventory["rare_gem"]:
                 return False
         
-        # Κάποιο άλλο item...
+        # Έξτρα αν χρειαστεί
         elif item == "magic_scroll":
             if needed_amount > 0 and not player_inventory["magic_scroll"]:
                 return False
         
-        # κ.λπ. για άλλα αντικείμενα
+        # ...προσθετω και άλλα όταν είμαι έτοιμος να ενισχύσω την ιστορία
 
     return True
 
@@ -51,7 +51,6 @@ def apply_choice_effects(state, choice):
     if (state, choice) == ("fight the bandits", "bandits defeated"):
         player_inventory["gold"] += 3
 
-    # Νέες επιπτώσεις:
     # Αν ψάξεις βαθύτερα για gem και κερδίσεις ή προσπεράσεις την αράχνη...
     if (state, choice) in [
         ("search deeper for gem", "spider defeated"),
@@ -71,7 +70,7 @@ def handle_choice(choice, current_state, transition_matrix, dialogue_label, upda
     - Ελέγχει αν έχεις τα requirements
     - Υπολογίζει reward, ενημερώνει πιθανότητες
     - Εφαρμόζει επιπτώσεις inventory
-    - Γυρνάει το επόμενο state
+    - Επιστρέφει το επόμενο state
     """
     choices = transition_matrix.get_choices(current_state)
     if choice not in choices:

@@ -188,20 +188,20 @@ base_matrix = {
         "visit market district": 0.3,
         "talk with street minstrel": 0.3
     },
-    # Μπορούμε να συνεχίσουμε...
+    # ...προσθετω και άλλα όταν είμαι έτοιμος να ενισχύσω την ιστορία
 
     "search for wizard's tower": {"wizard tower entrance": 1.0},
     "wizard tower entrance": {
         "knock on door": 0.5,
         "try to sneak in": 0.5
     },
-    # κ.ο.κ.
+    # ...προσθετω και άλλα όταν είμαι έτοιμος να ενισχύσω την ιστορία
 
     "cursed temple": {
         "explore temple halls": 0.5,
         "attempt purification ritual": 0.5
     },
-    # ...
+    # ...προσθετω και άλλα όταν είμαι έτοιμος να ενισχύσω την ιστορία
 }
 
 # --------------------------
@@ -248,7 +248,6 @@ player_rewards = {
         "offer escort": 0.4,
     },
 
-    # Νέες τοποθεσίες
     "visit blacksmith's forge": {
         "ask about forging a new blade": 0.3,
         "sell found loot": 0.2,
@@ -284,7 +283,7 @@ player_rewards = {
         "explore capital streets": 0.2,
         "search for wizard's tower": 0.3
     },
-    # κ.ο.κ.
+    # ...προσθετω και άλλα όταν είμαι έτοιμος να ενισχύσω την ιστορία
 }
 
 # --------------------------
@@ -311,5 +310,5 @@ choice_requirements = {
     # για να "προχωρήσεις" σε κάποια μετάβαση
     ("blacksmith demands rare gem", "need rare gem for blade"): {"rare_gem": 1},
 
-    # Μπορείς να προσθέσεις κι άλλα...
+    # ...προσθετω και άλλα όταν είμαι έτοιμος να ενισχύσω την ιστορία
 }

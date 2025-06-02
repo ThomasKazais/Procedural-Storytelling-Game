@@ -7,7 +7,7 @@ class DynamicTransitionMatrix:
     simple reinforcement learning mechanics.
     """
     def __init__(self, base_matrix):
-        # Χρησιμοποιούμε την defaultdict για να μπορούμε να επεκτείνουμε δυναμικά
+        # Χρησιμοποιούμε την defaultdict για να μπορούμε να επεκτείνουμε δυναμικά (και να μην κρασάρει το πρόγραμμα)
         self.matrix = defaultdict(dict, base_matrix)
 
     def update_probability(self, state, choice, reward):
@@ -26,7 +26,7 @@ class DynamicTransitionMatrix:
             # clamp μεταξύ 0 και 1
             new_prob = max(0.0, min(1.0, new_prob))
             self.matrix[state][choice] = new_prob
-            # κάνουμε normalize
+            # κάνουμε normalize (κανονικοποίηση)
             self._normalize(state)
 
     def get_choices(self, state):
