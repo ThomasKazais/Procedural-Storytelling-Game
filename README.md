@@ -1,8 +1,8 @@
 # Procedural Story Generation with Storylets and LLM Support
 
-This repository contains the source code and evaluation scripts developed as part of a thesis project on procedural story generation.
+This repository contains the source code for a procedural storytelling system that combines a rule-based storylet architecture with adaptive narrative selection mechanisms and optional Large Language Model (LLM) support.
 
-The system combines a rule-based storylet architecture with adaptive narrative selection mechanisms and optional Large Language Model (LLM) support. The main narrative structure and game state remain controlled by deterministic rules, while the LLM is used primarily for narrative paraphrasing and, in limited cases, for validated AI-generated micro-choices.
+The main narrative structure and game state are controlled by deterministic rules, while the LLM is used primarily for narrative paraphrasing and, in limited cases, for validated AI-generated micro-choices.
 
 ## Project Structure
 
@@ -151,7 +151,7 @@ python ablation.py --topk 1
 python ablation.py --csv results.csv
 ```
 
-The evaluation scripts disable LLM/API functionality in order to evaluate the underlying narrative-selection algorithm independently and to improve reproducibility.
+The evaluation scripts disable LLM/API functionality in order to evaluate the underlying narrative-selection algorithm independently and improve reproducibility.
 
 ## Reproducibility
 
@@ -166,9 +166,3 @@ Generated JSON/CSV result files can be excluded from version control and reprodu
 No API keys or credentials are included in this repository.
 
 API credentials should only be supplied locally through environment variables and should never be committed to the repository.
-
-## Thesis
-
-This repository accompanies a thesis on procedural storytelling using storylets, adaptive narrative-selection mechanisms and controlled LLM integration.
-
-The implementation is intended as a research prototype for examining how rule-based narrative control can be combined with limited generative-language functionality while preserving structural control over the story world.
